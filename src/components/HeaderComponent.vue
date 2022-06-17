@@ -3,7 +3,7 @@
 <header>
       <div>
         <b-navbar class="ver" toggleable="sm" type="dark">
-          <img src="../assets/dparcheotro.png" alt="1" />
+          <img src="../assets/deparche3.png" alt="1" />
 
           <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
