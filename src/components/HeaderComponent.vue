@@ -3,13 +3,13 @@
 <header>
       <div>
         <b-navbar class="ver" toggleable="sm" type="dark">
-          <img src="../assets/deparche3.png" alt="1" />
+          <img src="../assets/logoparche.png" alt="1" />
 
           <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
           <b-collapse id="nav-collapse" is-nav>
 
-            <b-navbar-nav>
+            <b-navbar-nav pills >
               <b-nav-item ><router-link  v-b-toggle.sidebar class="js" to="/"> EMPRESA</router-link> </b-nav-item>
               </b-navbar-nav>
             <b-navbar-nav>
