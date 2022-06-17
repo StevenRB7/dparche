@@ -23,6 +23,9 @@
             <b-navbar-nav>
             <b-nav-item href="#"><router-link class="js" to="/">PERFIL</router-link></b-nav-item>
             </b-navbar-nav>
+            <b-navbar-nav>
+            <b-nav-item href="#"><router-link class="js" to="/estadosanimo">ESTADOS DE ANIMO</router-link></b-nav-item>
+            </b-navbar-nav>
           </b-collapse>
         </b-navbar>
       </div>

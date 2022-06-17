@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <HeaderComponent msg="Welcome to Your Vue.js App"/>
+    <HeaderComponent/>
     <CarruselComponent/>
   </div>
 </template>
