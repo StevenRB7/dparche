@@ -21,8 +21,8 @@
                                     <h3 class="card-title mt-1" id="title-card">Imagen del Evento</h3>
                                 </div>
                                 <div class="form-group col-10 col-sm-8 offset-sm-2 col-lg-8 offset-lg-2">
-                                    <input type="file" class="custom-file-input" id="customFileLang">
-                                    <label class="custom-file-label mt-1" for="customFileLang">Seleccionar Archivo</label>
+                                    <input type="file" class="custom-file-input" id="customFileLang" required>
+                                    <label class="custom-file-label mt-1" for="customFileLang" >Seleccionar Archivo</label>
                                 </div>
                                 <div class="form-group my-3 col-10 col-sm-8 offset-sm-2 col-lg-8 offset-lg-2">
                                     <h3 class="card-title mt-1" id="title-card">Direccion del Evento</h3>
@@ -36,7 +36,7 @@
                                         <h3 class="card-title " id="title-card">Detalles del Evento</h3>
                                     </div>
                                     <textarea name="descripcion" placeholder="Escribe aquí..." class="form-control"
-                                        rows="5" cols="70"></textarea>
+                                        rows="5" cols="70" required></textarea>
                                 </div>
                                 
                             </div>
