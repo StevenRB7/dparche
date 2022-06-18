@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import EstadosAnimoView from '../views/EstadosAnimoView.vue'
 import RegistroEventosView from '../views/Eventos/RegistroEventosView.vue'
+import CategoriaView from '../views/Categorias/CategoriaView.vue'
+import RegistroEmpresasView from '../views/Empresas/RegistroEmpresasView.vue'
 
 Vue.use(VueRouter)
 
@@ -13,14 +15,24 @@ const routes = [
     component: HomeView
   },
   {
-    path: '/registro',
-    name: 'registro',
+    path: '/registroeventos',
+    name: 'registroeventos',
     component: RegistroEventosView
   },
   {
     path: '/estadosanimo',
     name: 'estadosanimo',
     component: EstadosAnimoView
+  },
+  {
+    path: '/categorias',
+    name: 'categorias',
+    component: CategoriaView
+  },
+  {
+    path: '/registroempresas',
+    name: 'registroEmpresas',
+    component: RegistroEmpresasView
   }
 
 ]

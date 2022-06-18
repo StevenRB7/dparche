@@ -10,21 +10,20 @@
           <b-collapse id="nav-collapse" is-nav>
 
             <b-navbar-nav pills >
-              <b-nav-item ><router-link  v-b-toggle.sidebar class="js" to="/"> EMPRESA</router-link> </b-nav-item>
+
+              <b-nav-item ><router-link  v-b-toggle.sidebar class="js" to="/registroempresas"> EMPRESAS</router-link> </b-nav-item>
               </b-navbar-nav>
             <b-navbar-nav>
-              <b-nav-item ><router-link v-b-toggle.sidebar class="js" to="/"> EVENTOS</router-link> </b-nav-item>
+              <b-nav-item ><router-link v-b-toggle.sidebar class="js" to="/registroeventos"> EVENTOS</router-link> </b-nav-item>
               </b-navbar-nav>
-
-              <b-navbar-nav>
-              <b-nav-item ><router-link v-b-toggle.sidebar class="js" to="/"> LOGIN</router-link> </b-nav-item>
-            </b-navbar-nav>
-
             <b-navbar-nav>
-            <b-nav-item href="#"><router-link class="js" to="/">PERFIL</router-link></b-nav-item>
+            <b-nav-item href="#"><router-link class="js" to="/categorias">CATEGORIAS</router-link></b-nav-item>
             </b-navbar-nav>
             <b-navbar-nav>
             <b-nav-item href="#"><router-link class="js" to="/estadosanimo">ESTADOS DE ANIMO</router-link></b-nav-item>
+            </b-navbar-nav>
+              <b-navbar-nav>
+              <b-nav-item class="lg" ><router-link v-b-toggle.sidebar class="js"  to="/"> LOGIN</router-link> </b-nav-item>
             </b-navbar-nav>
           </b-collapse>
         </b-navbar>
@@ -46,6 +45,7 @@ export default {
 </script>
 
 <style scoped>
+
 h3 {
   margin: 40px 0 0;
 }
@@ -88,7 +88,7 @@ a {
   margin-top: 5%;
   /* border: 3px solid #2E86C1; */
   /* border-radius: 50px; */
-  padding: 20px;
+  padding: 20opx;
 }
 
 .boton1 {

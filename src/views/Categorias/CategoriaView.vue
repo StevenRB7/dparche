@@ -1,5 +1,5 @@
 <template>
-  <div class="Eventos">
+  <div class="Categorias">
     <HeaderComponent/>
     <CarruselComponent/>
   </div>
@@ -10,7 +10,7 @@
 import HeaderComponent from '@/components/HeaderComponent.vue'
 import CarruselComponent from '@/components/CarruselComponent.vue'
 export default {
-  name: 'RegistroEventosView',
+  name: 'CategoriaView',
   components: {
     HeaderComponent,
     CarruselComponent
