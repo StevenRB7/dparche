@@ -12,16 +12,23 @@
                         <input type="text" class="form-control m-2" id="nombre" placeholder="Nombre" name="nombre" required>
                       </div>
                       <div class="form-group col-10 col-sm-8 offset-sm-2 col-lg-8 offset-lg-2">
+                        <input type="text" class="form-control m-2" id="apellido" placeholder="Apellido" name="apellido" required>
+                      </div>
+                      <div class="form-group col-10 col-sm-8 offset-sm-2 col-lg-8 offset-lg-2">
+                        <select name="Tipodocumento_idTipodocumento" class="custom-select m-2" required>
+                            <option value="">Tipo de documento</option>
+                            <option value="nit">Nit</option>
+                            <option value="bar">Cedula de ciudadania</option>
+                            <option value="cultura">Cultural</option>
+                            <option value="discoteca">Dicoteca</option>
+                            <option value="motel">Motel</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-10 col-sm-8 offset-sm-2 col-lg-8 offset-lg-2">
                         <input type="number" class="form-control m-2" id="nit" placeholder="Identificacion" name="nit" required> 
                       </div>
                       <div class="form-group col-10 col-sm-8 offset-sm-2 col-lg-8 offset-lg-2">
                         <input type="text" class="form-control m-2" id="ubicacion" placeholder="Direccion" name="ubicacion" required>
-                        <div class="form-group col-1 col-sm-1 col-lg-1">
-                            <a data-toggle="tooltip" data-placement="right"
-                                title="El nombre del aliado debe tener máximo 100 caracteres. Ejemplo: Quimpo S.A.S">
-                                <i class="far fa-question-circle fa-lg mt-2" id="icono-c"></i>
-                            </a>
-                        </div>
                       </div>
                       <div class="form-group col-10 col-sm-8 offset-sm-2 col-lg-8 offset-lg-2">
                         <textarea type="text" name="descripcion" maxlength="250" class="form-control m-2" placeholder="Descripción del Lugar" required></textarea>
@@ -42,7 +49,9 @@
                       <div class="form-group col-10 col-sm-8 offset-sm-2 col-lg-8 offset-lg-2">
                         <input type="email" class="form-control m-2" id="email" placeholder="Correo de la Empresa" name="email" required>
                       </div>
-
+                      <div class="form-group col-10 col-sm-8 offset-sm-2 col-lg-8 offset-lg-2">
+                        <input type="password" class="form-control m-2" id="Password" placeholder="Contraseña" name="Password" required>
+                      </div>
                       <button type="submit" class="btn btn-primary">Registrar</button>
                   </form>
               </div>
