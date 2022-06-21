@@ -51,19 +51,16 @@
             </div>
         </div>
     </div>
-    <CarruselComponent/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import HeaderComponent from '@/components/HeaderComponent.vue'
-import CarruselComponent from '@/components/CarruselComponent.vue'
 export default {
   name: 'RegistroEventosView',
   components: {
-    HeaderComponent,
-    CarruselComponent
+    HeaderComponent
   }
 }
 </script>
