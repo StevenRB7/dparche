@@ -27,23 +27,6 @@
             <b-navbar-nav>
               <b-nav-item ><b-link v-b-toggle.sidebar-border class="js">INICIAR SESION</b-link></b-nav-item>
             </b-navbar-nav>
-
-            <!-- <b-nav-item-dropdown text="PERFIL">
-                <b-button class="frut btn btn-outline-success my-1"
-                  >Perfil
-                </b-button>
-                <b-button class="frut btn btn-outline-success my-1"
-                  >Cerar sesion
-                </b-button>
-                <b-button class="frut btn btn-outline-success my-1"
-                  >Ayuda
-                </b-button>
-                <b-button class="frut btn btn-outline-success my-1"
-                  >
-                  <router-link to="../views/InicioSesionView.vue">IniciarSesion</router-link>
-                  <b-link v-b-toggle.sidebar-border>IniciarSesion</b-link>
-                </b-button>
-              </b-nav-item-dropdown> -->
           </b-collapse>
           <b-nav-form>
             <form class="conteiner-fluid">
@@ -164,7 +147,7 @@ a {
   margin-top: 5%;
   /* border: 3px solid #2E86C1; */
   /* border-radius: 50px; */
-  padding: 20opx;
+  padding: 20px;
 }
 .formulario {
   color: black;
