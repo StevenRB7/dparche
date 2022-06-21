@@ -4,7 +4,9 @@
       <div>
         <b-navbar class="ver" toggleable="sm" type="dark">
           <img src="../assets/deparche3.png" alt="1" />
-
+           <b-navbar-nav>
+              <b-nav-item class="lg" ><router-link v-b-toggle.sidebar class="js"  to="/">INICIO</router-link> </b-nav-item>
+            </b-navbar-nav>
           <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
           <b-collapse id="nav-collapse" is-nav>
@@ -21,9 +23,6 @@
             </b-navbar-nav>
             <b-navbar-nav>
             <b-nav-item href="#"><router-link class="js" to="/estadosanimo">ESTADOS DE ANIMO</router-link></b-nav-item>
-            </b-navbar-nav>
-              <b-navbar-nav>
-              <b-nav-item class="lg" ><router-link v-b-toggle.sidebar class="js"  to="/"> LOGIN</router-link> </b-nav-item>
             </b-navbar-nav>
             <b-navbar-nav>
               <b-nav-item ><b-link v-b-toggle.sidebar-border class="js">INICIAR SESION</b-link></b-nav-item>
