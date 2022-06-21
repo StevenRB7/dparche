@@ -8,7 +8,7 @@
                 <div class="card-body justify-content-center border border-primary rounded">
                     <h1 class="card-title mt-1" id="title-card">Formulario Eventos</h1>
                     <div class="container">
-                        <form action="" method="post">
+                        <form action="" method="POST">
                             <div class="row my-5 ">
                                 <div class="form-group col-10 col-sm-8 offset-sm-2 col-lg-8 offset-lg-2">
                                     <h3 class="card-title mt-1" id="title-card">Nombre del Evento</h3>
