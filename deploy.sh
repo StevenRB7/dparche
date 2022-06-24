@@ -7,11 +7,13 @@ set -e
 npm run build
 
 # navigate into the build output directory
+cd dist
 
-
-git add .
+git init
+git add -A
 git commit -m 'deploy'
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push 
+git push -f https://github.com/StevenRB7/dparcheVUE.git master:gh-pages
 
+cd -
