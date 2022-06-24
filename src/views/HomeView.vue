@@ -3,16 +3,16 @@
     <HeaderComponent/>
     <CarruselComponent/>
 
-<hr>
+<hr class="hr1">
 <h1>EVENTOS</h1>
 <div>
     <b-carousel
+    vh-200
       id="carousel-1"
       v-model="slide"
-      :interval="3000"
       controls
       indicators
-      background="#ababab"
+      background="#ffffff"
       img-width="1024"
       img-height="480"
       style="text-shadow: 1px 1px 2px #333;"
@@ -23,10 +23,11 @@
       <b-carousel-slide>
         <template #img>
           <img
+          :interval="2500"
             class="d-block img-fluid w-100"
             width="1024"
             height="480"
-            src="../assets/fiesta.jpg"
+            src="../assets/fiesta3.jpg"
             alt="image slot"
           >
         </template>
@@ -36,10 +37,11 @@
        <b-carousel-slide>
         <template #img>
           <img
+          :interval="2500"
             class="d-block img-fluid w-100"
             width="1024"
             height="480"
-            src="../assets/amigos.jpg"
+            src="../assets/fiest.jpg"
             alt="image slot"
           >
         </template>
@@ -49,10 +51,11 @@
       <b-carousel-slide>
          <template #img>
           <img
+          :interval="2500"
             class="d-block img-fluid w-100"
             width="1024"
             height="480"
-            src="../assets/fiesta.jpg"
+            src="../assets/bolos.jpg"
             alt="image slot"
           >
         </template>
@@ -63,10 +66,11 @@
       <b-carousel-slide>
         <template #img>
           <img
+          :interval="2500"
             class="d-block img-fluid w-100"
             width="1024"
             height="480"
-            src="../assets/amigos.jpg"
+            src="../assets/playa.jpg"
             alt="image slot"
           >
         </template>
@@ -76,10 +80,11 @@
       <b-carousel-slide>
         <template #img>
           <img
+          :interval="2500"
             class="d-block img-fluid w-100"
             width="1024"
             height="480"
-            src="../assets/fiesta.jpg"
+            src="../assets/restoran.jpg"
             alt="image slot"
           >
         </template>
@@ -119,6 +124,7 @@
         </p>
       </section>
     </section>
+    <FooterComponent/>
   </div>
 </template>
 
@@ -126,6 +132,7 @@
 // @ is an alias to /src
 import HeaderComponent from '@/components/HeaderComponent.vue'
 import CarruselComponent from '@/components/CarruselComponent.vue'
+import FooterComponent from '@/components/FooterComponent.vue'
 export default {
   data () {
     return {
@@ -144,14 +151,23 @@ export default {
   name: 'HomeView',
   components: {
     HeaderComponent,
-    CarruselComponent
+    CarruselComponent,
+    FooterComponent
   }
 }
 </script>
 
 <style scoped>
 
+.hr1 {
+  color: azure;
+}
+
 h1 {
+  color: #2196f3;
+}
+
+hr{
   color: #2196f3;
 }
 </style>

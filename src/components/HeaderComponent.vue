@@ -3,7 +3,7 @@
 <header>
       <div>
         <b-navbar class="ver" toggleable="sm" type="dark">
-          <img src="../assets/deparche3.png" alt="1" />
+          <img src="../assets/logofinal.png" alt="1" />
            <b-navbar-nav>
               <b-nav-item class="lg" ><router-link v-b-toggle.sidebar class="js"  to="/">INICIO</router-link> </b-nav-item>
             </b-navbar-nav>
@@ -25,8 +25,12 @@
             <b-nav-item href="#"><router-link class="js" to="/estadosanimo">ESTADOS DE ANIMO</router-link></b-nav-item>
             </b-navbar-nav>
             <b-navbar-nav>
-              <b-nav-item ><b-link v-b-toggle.sidebar-border class="js">INICIAR SESION</b-link></b-nav-item>
+              <b-nav-item  ><b-link v-b-toggle.sidebar-border class="js">INICIAR SESION</b-link></b-nav-item>
             </b-navbar-nav>
+            <!-- <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul> -->
           </b-collapse>
           <b-nav-form>
             <form class="conteiner-fluid">

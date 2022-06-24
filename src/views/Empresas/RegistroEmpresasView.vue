@@ -2,6 +2,7 @@
 <!-- eslint-disable -->
   <div class="Empresas">
     <HeaderComponent/>
+        <CarruselComponent/>
       <div class="justify-content-center row">
         <div class="col-8 card text-center ml-4 ml-sm-5 ml-lg-0">
           <div class="card-body">
@@ -58,16 +59,22 @@
           </div>
         </div>  
       </div>
+          <FooterComponent/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import HeaderComponent from '@/components/HeaderComponent.vue'
+import CarruselComponent from '@/components/CarruselComponent.vue'
+import FooterComponent from '@/components/FooterComponent.vue'
+
 export default {
   name: 'RegistroEmpresasView',
   components: {
-    HeaderComponent
+    HeaderComponent,
+    CarruselComponent,
+    FooterComponent
   }
 }
 </script>

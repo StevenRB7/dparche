@@ -56,19 +56,21 @@
     </tr>
   </tbody>
 </table>
-
+    <FooterComponent/>
   </div>
-
 </template>
 
 <script>
 import HeaderComponent from '@/components/HeaderComponent.vue'
 import CarruselComponent from '@/components/CarruselComponent.vue'
+import FooterComponent from '@/components/FooterComponent.vue'
+
 export default {
   name: 'EstadosAnimoView',
   components: {
     HeaderComponent,
-    CarruselComponent
+    CarruselComponent,
+    FooterComponent
   }
 
 }

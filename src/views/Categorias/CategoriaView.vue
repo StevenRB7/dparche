@@ -30,19 +30,23 @@
          <em><h4 class="bg-warning card-title mt-1 font-italic text-decoration-none " id="title-card">Mereces un descanso cuando las cosas estan dificiles..!!</h4></em>
       </div>
     </div>
+        <FooterComponent />
   </div>
-
 </template>
 
 <script>
 // @ is an alias to /src
 import HeaderComponent from '@/components/HeaderComponent.vue'
 import CarruselComponent from '@/components/CarruselComponent.vue'
+import FooterComponent from '@/components/FooterComponent.vue'
+
 export default {
   name: 'CategoriaView',
   components: {
     HeaderComponent,
-    CarruselComponent
+    CarruselComponent,
+    FooterComponent
+
   }
 }
 </script>

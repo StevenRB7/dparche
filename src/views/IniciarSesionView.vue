@@ -55,6 +55,7 @@
         </b-card-text>
       </b-card>
     </b-sidebar>
+     <FooterComponent/>
   </div>
 </template>
 
@@ -62,11 +63,13 @@
 <script>
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue'
+import FooterComponent from '@/components/FooterComponent.vue'
 
 export default {
   name: 'InicioSesion',
   components: {
     // HelloWorld
+    FooterComponent
   },
 };
 </script>

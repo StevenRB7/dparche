@@ -1,6 +1,8 @@
 <template>
   <div class="Eventos">
     <HeaderComponent/>
+        <CarruselComponent/>
+
 <!-- eslint-disable -->
     <div class="row justify-content-center my-5">
         <div class="col-11 col-lg-8 offset-lg-0">
@@ -51,16 +53,23 @@
             </div>
         </div>
     </div>
+        <FooterComponent/>
+
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import HeaderComponent from '@/components/HeaderComponent.vue'
+import CarruselComponent from '@/components/CarruselComponent.vue'
+import FooterComponent from '@/components/FooterComponent.vue'
+
 export default {
   name: 'RegistroEventosView',
   components: {
-    HeaderComponent
+    HeaderComponent,
+    CarruselComponent,
+    FooterComponent
   }
 }
 </script>
