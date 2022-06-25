@@ -1,11 +1,11 @@
 <template>
   <div class="hello">
 <header>
-      <div>
-        <b-navbar class="ver" toggleable="sm" type="dark">
+      <div class="item-wrap">
+        <b-navbar  class="ver" toggleable="sm" type="dark">
           <img src="../assets/logofinal.png" alt="1" />
-           <b-navbar-nav>
-              <b-nav-item class="lg" ><router-link v-b-toggle.sidebar class="js"  to="/">INICIO</router-link> </b-nav-item>
+           <b-navbar-nav >
+              <b-nav-item  class="lg" ><router-link v-b-toggle.sidebar class="js"  to="/">INICIO</router-link> </b-nav-item>
             </b-navbar-nav>
           <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -13,19 +13,19 @@
 
             <b-navbar-nav pills >
 
-              <b-nav-item ><router-link  v-b-toggle.sidebar class="js" to="/registroempresas"> EMPRESAS</router-link> </b-nav-item>
+              <b-nav-item class="clickme-text" :style="{color}" v-ripple="{center,class: rippleClass}"  ><router-link  v-b-toggle.sidebar class="js" to="/registroempresas">EMPRESAS</router-link> </b-nav-item>
               </b-navbar-nav>
             <b-navbar-nav>
-              <b-nav-item ><router-link v-b-toggle.sidebar class="js" to="/registroeventos"> EVENTOS</router-link> </b-nav-item>
+              <b-nav-item  class="clickme-text" :style="{color}" v-ripple="{center,class: rippleClass}" ><router-link v-b-toggle.sidebar class="js" to="/registroeventos"> EVENTOS</router-link> </b-nav-item>
               </b-navbar-nav>
             <b-navbar-nav>
-            <b-nav-item href="#"><router-link class="js" to="/categorias">CATEGORIAS</router-link></b-nav-item>
+            <b-nav-item  class="clickme-text" :style="{color}" v-ripple="{center,class: rippleClass}" href="#"><router-link class="js" to="/categorias">CATEGORIAS</router-link></b-nav-item>
             </b-navbar-nav>
             <b-navbar-nav>
-            <b-nav-item href="#"><router-link class="js" to="/estadosanimo">ESTADOS DE ANIMO</router-link></b-nav-item>
+            <b-nav-item  class="clickme-text" :style="{color}" v-ripple="{center,class: rippleClass}" href="#"><router-link class="js" to="/estadosanimo">ESTADOS DE ANIMO</router-link></b-nav-item>
             </b-navbar-nav>
             <b-navbar-nav>
-              <b-nav-item  ><b-link v-b-toggle.sidebar-border class="js">INICIAR SESION</b-link></b-nav-item>
+              <b-nav-item  class="clickme-text" :style="{color}" v-ripple="{center,class: rippleClass}"  ><b-link v-b-toggle.sidebar-border class="js">INICIAR SESION</b-link></b-nav-item>
             </b-navbar-nav>
             <!-- <ul class="nav navbar-nav navbar-right">
             <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -102,12 +102,47 @@
 export default {
   name: 'HeaderComponent',
   props: {
-    msg: String
+    msg: String,
+    rippleClass: { type: String }
+
   }
 }
 </script>
 
 <style scoped>
+
+.ver{
+  overflow: hidden;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+}
+.clickme-text {
+  color: inherit;
+  flex:  100 auto;
+  justify-content: inherit;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 25px auto;
+  cursor: pointer;
+  user-select: none;
+    bottom: 0;
+  position: relative !important;
+}
+.clickme-text:hover:before {
+  opacity: 0.10;
+}
+.clickme-text:active:before {
+  opacity: 100;
+}
+.hash {
+  color: currentColor;
+  opacity: 0.3;
+}
+.item-wrap {
+  padding:  1px;
+  box-sizing: border-box;
+}
 
 h3 {
   margin: 40px 0 0;
