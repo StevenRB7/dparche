@@ -56,6 +56,7 @@
     </tr>
   </tbody>
 </table>
+
     <FooterComponent/>
   </div>
 </template>

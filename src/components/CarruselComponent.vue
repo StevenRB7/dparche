@@ -2,9 +2,9 @@
   <div >
     <b-carousel
       id="carousel-1"
-      :interval="3000"
+      :interval="2500"
       background="#fffff"
-      img-width="1024"
+      img-width="90%"
       img-height="200"
       style="text-shadow: 1px 1px 2px ;"
     >
@@ -12,7 +12,7 @@
         <template #img>
           <img
             :interval="2500"
-            width="1240"
+            width="90%"
             height="200"
             src="../assets/ciclismo.jpg"
           >
@@ -22,7 +22,7 @@
         <template #img>
           <img
             :interval="2500"
-            width="1240"
+            width="90%"
             height="200"
             src="../assets/piscina.jpg"
           >
@@ -32,7 +32,7 @@
         <template #img>
           <img
             :interval="2500"
-            width="1240"
+            width="90%"
             height="200"
             src="../assets/tomar.jpg"
           >
@@ -42,7 +42,7 @@
         <template #img>
           <img
             :interval="2500"
-            width="1240"
+            width="90%"
             height="200"
             src="../assets/naturaleza.jpg"
           >
@@ -52,7 +52,7 @@
         <template #img>
           <img
             :interval="1500"
-            width="1240"
+            width="90%"
             height="200"
             src="../assets/fiestabanner.jpg"
           >

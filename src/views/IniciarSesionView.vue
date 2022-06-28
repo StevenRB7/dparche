@@ -59,8 +59,8 @@
   </div>
 </template>
 
-
 <script>
+
 // @ is an alias to /src
 // import HelloWorld from '@/components/HelloWorld.vue'
 import FooterComponent from '@/components/FooterComponent.vue'
@@ -70,8 +70,8 @@ export default {
   components: {
     // HelloWorld
     FooterComponent
-  },
-};
+  }
+}
 </script>
 
 <style scoped>

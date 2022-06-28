@@ -108,6 +108,7 @@
 
  <hr>
 <h1>MAS SOBRE NOSOTROS</h1>
+
 <section class="d-flex flex-wrap justify-content-evenly padre">
       <section class="col-xl-4 col-md-6 col-12 align-items-center mision">
         <h4 class="titulo">MISION</h4>
