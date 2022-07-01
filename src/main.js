@@ -16,7 +16,7 @@ Vue.use(IconsPlugin)
 Vue.use(VWave)
 Vue.directive('ripple', Ripple)
 
-Vue.config.productionTip = false
+Vue.config.productionTip = true
 
 new Vue({
   router,
