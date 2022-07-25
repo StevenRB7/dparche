@@ -163,7 +163,7 @@ display: flex;
       left: 0;
       width: 100%;
       height: 10px;
-      background: #2a2a2a;
+      background: #333;
       transform-origin: top;
       transform: skewX(-41deg);
     }
@@ -174,7 +174,7 @@ display: flex;
       left: -9px;
       width: 9px;
       height: 100%;
-      background: #2a2a2a;
+      background: #333;
       transform-origin: right;
       transform: skewY(-49deg);
     }
@@ -187,8 +187,8 @@ display: flex;
       display: flex !important;
       justify-content: center;
       align-items: center;
-      background: #333;
-      color: rgba(255, 255, 255, 0.2);
+      background: #2a2a2a;
+      color: rgb(251, 248, 248);
       font-size: 30px !important;
       transition: 0.2s;
     }
@@ -196,7 +196,7 @@ display: flex;
       z-index: 1000;
       transition: 0.5s;
       color: #fff;
-      box-shadow: -1px 1px 1px rgba(255, 255, 255, 0.05);
+      box-shadow: -1px 1px 1px rgba(103, 18, 18, 0.05);
     }
     ul li:hover span:nth-child(5){
       transform: translate(40px, -40px);
