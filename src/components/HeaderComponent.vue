@@ -8,7 +8,7 @@
           <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
   <ul>
       <li style="--clr:#014ba0">
-      <router-link to="/"><a href="#" data-text="Inicio">&nbsp;Inicio&nbsp;</a></router-link>
+      <router-link to="/"><a href="#" data-text="INICIO">&nbsp;INICIO&nbsp;</a></router-link>
       </li>
       <li style="--clr:#014ba0">
       <router-link to="/registroempresas"><a href="#" data-text="EMPRESAS">&nbsp;EMPRESAS&nbsp;</a></router-link>
@@ -136,8 +136,8 @@ export default {
       line-height: 20px;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: transparent;
-      -webkit-text-stroke: 1px rgba(255,255,255,0.5);
+      color:rgba(255, 255, 255, 0.5);
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
     }
     ul li a::before{
       content: attr(data-text);
