@@ -4,34 +4,30 @@
       <div class="item-wrap">
         <b-navbar  class="ver" toggleable="sm" type="dark">
           <img src="../assets/logofinal.png" alt="1" />
-           <b-navbar-nav >
-              <b-nav-item  class="lg" ><router-link v-b-toggle.sidebar class="js"  to="/">INICIO</router-link> </b-nav-item>
-            </b-navbar-nav>
+
           <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
-          <b-collapse id="nav-collapse" is-nav>
-
-            <b-navbar-nav pills >
-
-              <b-nav-item class="clickme-text" :style="{color}" v-ripple="{center,class: rippleClass}"  ><router-link  v-b-toggle.sidebar class="js" to="/registroempresas">EMPRESAS</router-link> </b-nav-item>
-              </b-navbar-nav>
-            <b-navbar-nav>
-              <b-nav-item  class="clickme-text" :style="{color}" v-ripple="{center,class: rippleClass}" ><router-link v-b-toggle.sidebar class="js" to="/registroeventos"> EVENTOS</router-link> </b-nav-item>
-              </b-navbar-nav>
-            <b-navbar-nav>
-            <b-nav-item  class="clickme-text" :style="{color}" v-ripple="{center,class: rippleClass}" href="#"><router-link class="js" to="/categorias">CATEGORIAS</router-link></b-nav-item>
-            </b-navbar-nav>
-            <b-navbar-nav>
-            <b-nav-item  class="clickme-text" :style="{color}" v-ripple="{center,class: rippleClass}" href="#"><router-link class="js" to="/estadosanimo">ESTADOS DE ANIMO</router-link></b-nav-item>
-            </b-navbar-nav>
-            <b-navbar-nav>
-              <b-nav-item  class="clickme-text" :style="{color}" v-ripple="{center,class: rippleClass}"  ><b-link v-b-toggle.sidebar-border class="js">INICIAR SESION</b-link></b-nav-item>
-            </b-navbar-nav>
-            <!-- <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-            </ul> -->
-          </b-collapse>
+  <ul>
+      <li style="--clr:#014ba0">
+      <router-link to="/"><a href="#" data-text="Inicio">&nbsp;Inicio&nbsp;</a></router-link>
+      </li>
+      <li style="--clr:#014ba0">
+      <router-link to="/registroempresas"><a href="#" data-text="EMPRESAS">&nbsp;EMPRESAS&nbsp;</a></router-link>
+      </li>
+      <li style="--clr:#014ba0">
+            <router-link to="/registroeventos"><a href="#" data-text="EVENTOS">&nbsp;EVENTOS&nbsp;</a></router-link>
+      </li>
+      <li style="--clr:#014ba0">
+      <router-link to="/categorias"><a href="#" data-text="CATEGORIAS">&nbsp;CATEGORIAS&nbsp;</a></router-link>
+      </li>
+      <li style="--clr:#014ba0">
+      <router-link to="/estadosanimo"><a href="#" data-text="ESTADOS DE ANIMO">&nbsp;ESTADOS DE ANIMO&nbsp;</a>
+</router-link>
+      </li>
+      <li style="--clr:#014ba0">
+      <b-link v-b-toggle.sidebar-border class="js"><a href="#" data-text="INICIAR SESION">&nbsp;INICIAR SESION&nbsp;</a>
+      </b-link>
+      </li>
+    </ul>
           <b-nav-form>
             <form class="conteiner-fluid">
             </form>
@@ -110,6 +106,53 @@ export default {
 </script>
 
 <style scoped>
+ *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #252839;
+    }
+    ul{
+      position: relative;
+      display: contents;
+      flex-direction: column;
+      gap: 30px;
+    }
+    ul li{
+      position: relative;
+      list-style: none;
+    }
+    ul li a{
+      position: relative;
+      font-size: 20px;
+      text-decoration: none;
+      line-height: 20px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(255,255,255,0.5);
+    }
+    ul li a::before{
+      content: attr(data-text);
+      position: absolute;
+      color: var(--clr);
+      width: 0;
+      overflow: hidden;
+      transition: 1s;
+      border-right: 8px solid  var(--clr);
+      -webkit-text-stroke: 1px  var(--clr);
+    }
+    ul li a:hover::before{
+      width: 100%;
+      filter: drop-shadow(0 0 25px var(--clr));
+    }
 
 .ver{
   overflow: hidden;

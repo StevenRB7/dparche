@@ -44,7 +44,7 @@
                             </div>
                             <div class="row justify-content-center">
                                 <div class="col-sm-8 mt-2 mb-4">
-                                    <button type="submit" name="button" class="btn btn-dark w-100">Guardar</button>
+                                    <button type="submit" name="button" class="btn btn-primary">Guardar</button>
                                 </div>
                             </div>
                         </form>
