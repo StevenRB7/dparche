@@ -101,7 +101,7 @@
         <p class="texto">
           LINK DE PARCHE EN CONSTRUCCION
         </p>
-        <img src="../assets/logocubo.png" alt="" class="col-xl-10 col-md-11 col-11"/>
+        <img src="../assets/dparchea_1000.png" alt="" class="col-xl-10 col-md-11 col-11"/>
       </section>
     </section>
   </div>
@@ -110,14 +110,14 @@
 <h1>MAS SOBRE NOSOTROS</h1>
 
 <section class="d-flex flex-wrap justify-content-evenly padre">
-      <section class="col-xl-4 col-md-6 col-12 align-items-center mision">
+      <section class=" borde col-xl-4 col-md-6 col-12 align-items-center mision">
         <h4 class="titulo">MISION</h4>
         <p class="texto">
           A raiz de nuestra aplicación buscamos que los aprendices sena CTPI busque diferentes alternativas de distracción y/o entretenimiento, que pueda ayudarles a "quemar energía" que es hacer que el aprendiz participe activamente en estos lugares y eventos, para así mantener un equilibrio entre en estudio o trabajo con su salud mental, ya que vemos que apartir de la pandemia este a sido afectada en un gran porcentaje
         </p>
         <img src="../assets/amigos.jpg" alt="" class="col-xl-10 col-md-11 col-11"/>
       </section>
-      <section class="col-xl-4 col-md-6 col-12 align-items-center vision">
+      <section class="borde col-xl-4 col-md-6 col-12 align-items-center vision">
         <img src="../assets/fiesta.jpg" alt="" class="col-xl-10 col-md-11 col-11 imgvision"/>
         <h4 class="titulo">VISION</h4>
         <p class="texto">
@@ -162,6 +162,11 @@ export default {
 
 .hr1 {
   color: azure;
+}
+.borde{
+  margin-top: 3%;
+  border: 3px solid rgb(89, 165, 252);
+  border-radius: 10px;
 }
 
 h1 {
