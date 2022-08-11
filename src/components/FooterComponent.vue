@@ -80,7 +80,7 @@ export default {
 
 footer {
   position: relative;
-  background:  rgb(51, 154, 223);
+  background:  rgb(89, 165, 252);
   height: auto;
   font-family: "Open Sans";
   padding-top: 40px;
