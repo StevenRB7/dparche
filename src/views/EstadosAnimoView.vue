@@ -16,7 +16,6 @@
       <th scope="col">#</th>
       <th scope="col">Nombre</th>
       <th scope="col">Estado de Animo</th>
-      <th scope="col">Edad</th>
     </tr>
   </thead>
   <tbody>
@@ -24,35 +23,26 @@
       <th scope="row">1</th>
       <td>Steven</td>
       <td>Triste</td>
-      <td>23</td>
     </tr>
     <tr>
       <th scope="row">2</th>
       <td>Jacob</td>
       <td>Feliz</td>
-      <td>52</td>
-
     </tr>
     <tr>
       <th scope="row">3</th>
       <td>Larry the Bird</td>
       <td>Enojado</td>
-      <td>30</td>
-
     </tr>
     <tr>
       <th scope="row">4</th>
       <td>Larry</td>
       <td>Enojado</td>
-      <td>82</td>
-
     </tr>
     <tr>
       <th scope="row">5</th>
       <td>zzzz</td>
       <td>Triste</td>
-       <td>22</td>
-
     </tr>
   </tbody>
 </table>

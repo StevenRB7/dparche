@@ -7,6 +7,9 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import 'bootstrap/js/dist/carousel'
 import 'bootstrap-vue/dist/bootstrap-vue'
 
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+
 import VWave from 'v-wave'
 import Ripple from 'vue-material-design-ripple'
 import 'vue-material-design-ripple/dist/vue-material-design-ripple.css'
@@ -15,6 +18,7 @@ Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
 Vue.use(VWave)
 Vue.directive('ripple', Ripple)
+Vue.use(VueAxios, axios)
 
 Vue.config.productionTip = true
 
