@@ -10,7 +10,7 @@
                 <div class="card-body justify-content-center border border-primary rounded">
                     <h1 class="card-title mt-1" id="title-card">Formulario Eventos</h1>
                     <div class="container">
-                        <form action="" method="POST">
+                        <form action="" method="POST" enctype="">
                             <div class="row my-5 ">
                                 <div class="form-group col-10 col-sm-8 offset-sm-2 col-lg-8 offset-lg-2">
                                     <h3 class="card-title mt-1" id="nombre" name="nombre">Nombre del Evento</h3>
@@ -19,13 +19,20 @@
                                     <input v-model="form.nombre" type="text" name="nombre" maxlength="100" class="form-control text-center"
                                         placeholder="Nombre del Evento" required>
                                 </div>
-                                <div class="form-group my-4 col-10 col-sm-8 offset-sm-2 col-lg-8 offset-lg-2">
+                                <div class="form-group my-3 col-10 col-sm-8 offset-sm-2 col-lg-8 offset-lg-2">
+                                    <h3 class="card-title mt-1" id="imagen">Imagen del Evento</h3>
+                                </div>
+                                <div class="form-group col-10 col-sm-8 offset-sm-2 col-lg-8 offset-lg-2">
+                                    <input v-model="form.imagen" name="imagen" id="imagen" type="text" maxlength="100" class="form-control text-center"
+                                        placeholder="Copia la url de la imagen" required>
+                                </div>  
+                                <!-- <div class="form-group my-4 col-10 col-sm-8 offset-sm-2 col-lg-8 offset-lg-2">
                                     <h3 class="card-title mt-1" id="title-card">Imagen del Evento</h3>
                                 </div>
                                 <div class="form-group col-10 col-sm-8 offset-sm-2 col-lg-8 offset-lg-2">
                                     <input  type="file" name="imagen" class="custom-file-input" id="imagen" required>
                                     <label v-model="form.imagen" class="custom-file-label mt-1" for="customFileLang" ></label>
-                                </div>
+                                </div> -->
                                 <div class="form-group my-3 col-10 col-sm-8 offset-sm-2 col-lg-8 offset-lg-2">
                                     <h3 for="example-datepicker">Fecha Del Evento</h3>
                                     <b-form-datepicker id="example-datepicker" v-model="form.fecha" class="mb-2" placeholder="Digita la fecha de tu evento"></b-form-datepicker>
