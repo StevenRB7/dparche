@@ -11,7 +11,7 @@
       <router-link to="/"><a href="#" data-text="INICIO">&nbsp;INICIO&nbsp;</a></router-link>
       </li>
       <li style="--clr:#014ba0">
-      <router-link to="/registroempresas"><a href="#" data-text="EMPRESAS">&nbsp;EMPRESAS&nbsp;</a></router-link>
+      <router-link to="/registroempresas"><a href="#" data-text="INTERESES">&nbsp;INTERESES&nbsp;</a></router-link>
       </li>
       <li style="--clr:#014ba0">
             <router-link to="/registroeventos"><a href="#" data-text="EVENTOS">&nbsp;EVENTOS&nbsp;</a></router-link>

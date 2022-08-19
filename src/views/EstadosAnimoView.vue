@@ -5,21 +5,17 @@
     <b-container>
       <b-row class="text-center">
         <b-col md="12" class="py-3">
-          <b-button
-            class="btnlist"
-            v-b-tooltip.hover="'Lista de Usuarios'"
-            variant="outline-light "
-            >Lista de Usuarios</b-button
-          >
         </b-col>
       </b-row>
+      <h3 class="font-weight-bold text-primary">Tabla Estatos De Animo</h3>
     </b-container>
-    <table class="table">
+    <table class="table table-bordered " style="width: 80%" align="center">
       <thead>
-        <tr>
+        <tr class="bg-primary text-white" >
           <th scope="col">Id</th>
           <th scope="col">Usuario</th>
           <th scope="col">Estado de Animo</th>
+          <th scope="col">Opciones</th>
         </tr>
       </thead>
       <tbody>
@@ -27,27 +23,22 @@
           <td>{{ user.idCorreo }}</td>
           <td>{{ user.usuario }}</td>
           <td>{{ user.estado }}</td>
+          <td>
+              <form name="from" @submit.prevent="Eliminar(key.index)">
+                  <!-- <router-link
+                    :to="{
+                      name: 'EditProgramacionView',
+                      params: { id: programacion.id },
+                    }"
+                    class="btn btn-outline-info"
+                    ><i class="fa-solid fa-pen-to-square"></i
+                  ></router-link> -->
+                  <button type="input" class="btn btn-outline-danger">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </form>
+              </td>
         </tr>
-        <!-- <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Feliz</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry the Bird</td>
-      <td>Enojado</td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>Larry</td>
-      <td>Enojado</td>
-    </tr>
-    <tr>
-      <th scope="row">5</th>
-      <td>zzzz</td>
-      <td>Triste</td>
-    </tr> -->
       </tbody>
     </table>
 

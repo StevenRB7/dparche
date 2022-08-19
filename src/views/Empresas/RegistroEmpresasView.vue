@@ -3,78 +3,116 @@
   <div class="Empresas">
     <HeaderComponent/>
         <CarruselComponent/>
-      <div class="justify-content-center row">
-        <div class="col-8 card text-center ml-4 ml-sm-5 ml-lg-0">
-          <div class="card-body">
-            <h3 class="card-title mt-1 font-italic text-decoration-none " id="title-card">Registro Empresa</h3>
-              <div class="container">
-                  <form class="">
-                      <div class="form-group col-10 col-sm-8 offset-sm-2 col-lg-8 offset-lg-2">
-                        <input type="text" class="form-control m-2" id="nombre" placeholder="Nombre" name="nombre" required>
-                      </div>
-                      <div class="form-group col-10 col-sm-8 offset-sm-2 col-lg-8 offset-lg-2">
-                        <input type="text" class="form-control m-2" id="apellido" placeholder="Apellido" name="apellido" required>
-                      </div>
-                      <div class="form-group col-10 col-sm-8 offset-sm-2 col-lg-8 offset-lg-2">
-                        <select name="Tipodocumento_idTipodocumento" class="custom-select m-2" required>
-                            <option value="">Tipo de documento</option>
-                            <option value="nit">Nit</option>
-                            <option value="bar">Cedula de ciudadania</option>
-                            <option value="cultura">Cultural</option>
-                            <option value="discoteca">Dicoteca</option>
-                            <option value="motel">Motel</option>
-                        </select>
-                      </div>
-                      <div class="form-group col-10 col-sm-8 offset-sm-2 col-lg-8 offset-lg-2">
-                        <input type="number" class="form-control m-2" id="nit" placeholder="Identificacion" name="nit" required> 
-                      </div>
-                      <div class="form-group col-10 col-sm-8 offset-sm-2 col-lg-8 offset-lg-2">
-                        <input type="text" class="form-control m-2" id="ubicacion" placeholder="Direccion" name="ubicacion" required>
-                      </div>
-                      <div class="form-group col-10 col-sm-8 offset-sm-2 col-lg-8 offset-lg-2">
-                        <textarea type="text" name="descripcion" maxlength="250" class="form-control m-2" placeholder="Descripción del Lugar" required></textarea>
-                      </div>
-                      <div class="form-group col-10 col-sm-8 offset-sm-2 col-lg-8 offset-lg-2">
-                        <select name="Categoria" class="custom-select m-2" required>
-                            <option value="">Tipo de Categoria</option>
-                            <option value="restaurante">Restaurante</option>
-                            <option value="bar">Bar</option>
-                            <option value="cultura">Cultural</option>
-                            <option value="discoteca">Dicoteca</option>
-                            <option value="motel">Motel</option>
-                        </select>
-                      </div>
-                      <div class="form-group col-10 col-sm-8 offset-sm-2 col-lg-8 offset-lg-2">
-                        <input type="number" class="form-control m-2" id="telefono" placeholder="Numero de telefono" name="telefono" required> 
-                      </div>
-                      <div class="form-group col-10 col-sm-8 offset-sm-2 col-lg-8 offset-lg-2">
-                        <input type="email" class="form-control m-2" id="email" placeholder="Correo de la Empresa" name="email" required>
-                      </div>
-                      <div class="form-group col-10 col-sm-8 offset-sm-2 col-lg-8 offset-lg-2">
-                        <input type="password" class="form-control m-2" id="Password" placeholder="Contraseña" name="Password" required>
-                      </div>
-                      <button type="submit" class="btn btn-primary">Registrar</button>
-                  </form>
-              </div>
-          </div>
-        </div>  
-      </div>
-          <FooterComponent/>
+ <b-container>
+      <b-row class="text-center">
+        <b-col md="12" class="py-3">
+        </b-col>
+      </b-row>
+      <h3 class="font-weight-bold text-primary">Tabla Intereses</h3>
+    </b-container>
+    <table class="table table-bordered " style="width: 80%" align="center">
+      <thead>
+        <tr class="bg-primary text-white" >
+          <th scope="col">Id</th>
+          <th scope="col">Usuario</th>
+          <th scope="col">Intereses</th>
+          <th scope="col">Opciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(user, index) in dataStatusGet" :key="index">
+          <td>{{ user.idCorreo }}</td>
+          <td>{{ user.usuario }}</td>
+          <td>{{ user.interes }}</td>
+          <td>
+              <form name="from" @submit.prevent="Eliminar(key.index)">
+                  <!-- <router-link
+                    :to="{
+                      name: 'EditProgramacionView',
+                      params: { id: programacion.id },
+                    }"
+                    class="btn btn-outline-info"
+                    ><i class="fa-solid fa-pen-to-square"></i
+                  ></router-link> -->
+                  <button type="input" class="btn btn-outline-danger">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </form>
+              </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <FooterComponent />
   </div>
 </template>
 
 <script>
+/* eslint-disable */
 // @ is an alias to /src
-import HeaderComponent from '@/components/HeaderComponent.vue'
-import CarruselComponent from '@/components/CarruselComponent.vue'
-import FooterComponent from '@/components/FooterComponent.vue'
+import HeaderComponent from "@/components/HeaderComponent.vue";
+import CarruselComponent from "@/components/CarruselComponent.vue";
+import FooterComponent from "@/components/FooterComponent.vue";
+import axios from "axios";
+import { db } from "@/firebase/init.js";
 
 export default {
-  name: 'RegistroEmpresasView',
+  name: "EstadosAnimoView",
   components: {
     HeaderComponent,
     CarruselComponent,
-    FooterComponent
-  }
-}
+    FooterComponent,
+  },
+
+  data() {
+    return {
+      usuarios: {
+        id: "",
+        mail: "",
+        nombre: "",
+      },
+
+      dataUsers: [],
+      dataStatusGet: [],
+    };
+  },
+
+  mounted() {
+    this.verUsuarios();
+    this.getStatus();
+  },
+  methods: {
+    verUsuarios() {
+      axios
+        .get(
+          "https://deparche-51e93-default-rtdb.firebaseio.com/User.json?print=pretty"
+        )
+        .then((rows) => {
+          return rows.data;
+        })
+        .then((responseTwo) => {
+          this.dataUsers = responseTwo;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+
+    async getStatus() {
+      let listStatus = [];
+      db.collection("Intereses")
+        .get()
+        .then(function (result) {
+          result.forEach(function (status) {
+            listStatus.push(status.data());
+          });
+          return listStatus;
+        })
+        .then((response) => {
+        this.dataStatusGet = response;
+
+        });
+    },
+  },
+};
 </script>

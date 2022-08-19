@@ -125,29 +125,103 @@
         </p>
       </section>
     </section>
+    <b-container>
+      <b-row class="text-center">
+        <b-col md="12" class="py-3">
+        </b-col>
+      </b-row>
+      <h3 class="font-weight-bold text-primary">Tabla Usuarios</h3>
+    </b-container>
+
+<table class="table table-bordered " style="width: 80%" align="center">
+      <thead>
+        <tr class="bg-primary text-white" >
+          <th scope="col">Id</th>
+          <th scope="col">Correo</th>
+          <th scope="col">Usuario</th>
+          <th scope="col">Opciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="(user, index) in dataUsers" :key="index">
+          <td>{{ user.id }}</td>
+          <td>{{ user.mail }}</td>
+          <td>{{ user.nombre }}</td>
+          <td>
+              <form name="from" @submit.prevent="Eliminar(key.index)">
+                  <!-- <router-link
+                    :to="{
+                      name: 'EditProgramacionView',
+                      params: { id: programacion.id },
+                    }"
+                    class="btn btn-outline-info"
+                    ><i class="fa-solid fa-pen-to-square"></i
+                  ></router-link> -->
+                  <button type="input" class="btn btn-outline-danger">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </form>
+              </td>
+        </tr>
+      </tbody>
+    </table>
+
     <FooterComponent/>
   </div>
 </template>
 
 <script>
+/* eslint-disable */
 // @ is an alias to /src
 import HeaderComponent from '@/components/HeaderComponent.vue'
 import CarruselComponent from '@/components/CarruselComponent.vue'
 import FooterComponent from '@/components/FooterComponent.vue'
+
+import axios from "axios";
+import { db } from "@/firebase/init.js";
+
 export default {
   data () {
     return {
       slide: 0,
-      sliding: null
+      sliding: null,
+
+      usuarios: {
+        id: "",
+        mail: "",
+        nombre: "",
+      },
+
+      dataUsers: [],
     }
   },
+
+ mounted() {
+    this.verUsuarios();
+  },
+
   methods: {
     onSlideStart (slide) {
       this.sliding = true
     },
     onSlideEnd (slide) {
       this.sliding = false
-    }
+    },
+    verUsuarios() {
+      axios
+        .get(
+          "https://deparche-51e93-default-rtdb.firebaseio.com/User.json?print=pretty"
+        )
+        .then((rows) => {
+          return rows.data;
+        })
+        .then((responseTwo) => {
+          this.dataUsers = responseTwo;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
   },
   name: 'HomeView',
   components: {
